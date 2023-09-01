@@ -24,7 +24,7 @@ This repository contains the source code used in the numerical simulations prese
   * chmod 755 buildproject.sh
   * ./buildproject.sh BlackSeaGasHydrates
   * cd BlackSeaGasHydrates/src/
-  * rm -rf BlackSeaGasHydrates.cc
+  * rm -rf blacksea_multiple_bsrs.cc
   * rm -rf CMakeLists.txt
   * cp \_all_source_files_in_repo\_ .
   * cd ../..
@@ -33,9 +33,9 @@ This repository contains the source code used in the numerical simulations prese
 
 ## To run the simulations:
 * Execute following commands in terminal (in given order):
-  * cd /dune_2_8/GasHydrateRecycling/release-build/src
-  * ./problem \_your-user-name\_ \_input-file\_  
-    * input files are located in the folder: /dune_2_8/BlackSeaGasHydrates/src/problem/inputs/multiple_BSRs_study/
+  * cd /dune_2_8/BlackSeaGasHydrates/release-build/src
+  * ./blacksea_multiple_bsrs \_your-user-name\_ \_input-file\_  
+    * input files are located in the folder: /dune_2_8/BlackSeaGasHydrates/src/blacksea_multiple_bsrs/inputs/
     * input files are the files with the extension ".ini". In the execution call, drop the .ini extension.
     * hint on \_your_user_name\_: The main executable looks for the following path: home/\_your_user_name\_/dune_2_8/BlackSeaGasHydrates/
 
@@ -46,21 +46,13 @@ This repository contains the source code used in the numerical simulations prese
   * installation/buildproject.sh
   * installation/compile.sh
 * source files 
-  * duneincludes.hh
-  * problem/main.cc
-  * problem/initial.hh
-  * problem/boundary.hh
-  * problem/parameters.hh
-  * problem/postprocess.hh
-  * problem/inputs/multiple_BSRs_study/scenarioXXX.ini 
+  * include_dune.hh
+  * blacksea_multiple_bsrs.cc
+  * blacksea_multiple_bsrs/include_problem.hh
+    * This includes all the necessary src files
+  * blacksea_multiple_bsrs/inputs/scenarioX.ini 
     * Input files are set up for scenarios with each combination of the parameters sampled in the study presented in this manuscript.
     * These parameters are: 1) initial GH volume V0, 2) kinetic rate of hydrate dissociation kd, and 3) kinetic rate of hydrate formation kf.
-  * operators/operations.hh
-  * operators/localoperator.hh
-  * operators/timeoperator.hh
-  * operators/initialvaluefunction.hh
-  * operators/boundaryvaluefunction.hh
-  * operators/driver.hh
-* outputs/problem/multiple_BSRs_study
-  *  Simulation outputs for the reference scenario is archived in this repository.
+* outputs/blacksea_multiple_bsrs/test0
+  *  Simulation outputs for the reference scenario (scenario2) are archived in this repository.
   *  Use PARAVIEW to visualize and plot this scenario.
