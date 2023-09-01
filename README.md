@@ -56,3 +56,6 @@ This repository contains the source code used in the numerical simulations prese
 * outputs/blacksea_multiple_bsrs/test0
   *  Simulation outputs for the reference scenario (scenario2) are archived in this repository.
   *  Use PARAVIEW to visualize and plot this scenario.
+* Animations of the reference scenario
+  *  outputs/blacksea_multiple_bsrs/BlackSea_multipleBSRs_scenario2_small_fast.avi
+  *  outputs/blacksea_multiple_bsrs/BlackSea_multipleBSRs_scenario2_small_fast.mp4
