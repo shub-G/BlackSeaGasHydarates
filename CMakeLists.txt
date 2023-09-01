@@ -1,0 +1,2 @@
+add_executable("blacksea_multiple_bsrs" blacksea_multiple_bsrs.cc)
+target_link_dune_default_libraries("blacksea_multiple_bsrs")
